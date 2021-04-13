@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Joshua Millward - About Me</title>
+        <script>
+            function stopMarquee(){
+                document.getElementById("myMarquee").stop();
+            }
+            function startMarquee(){
+                if(document.getElementById('myMarquee').innerHTML !== "But not always :D"){
+                    document.getElementById('myMarquee').innerHTML = "But not always :P";
+                    document.getElementById('myMarquee').start();
+                }   
+            }
+            function hide() {
+                var x = document.getElementById("button");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body onload="stopMarquee()">
+        <h1>Joshua Millward</h1>
+            <pre>                                  &lt;About Me&gt;</pre>
+        <hr/>
+        <h2>My Hobbies</h2>
+        <p>
+            I enjoy: <br/>
+            Programming<br/> 
+            Wrestling <br/> 
+            Reading <br/> 
+            Biking
+        </p>
+        <h2>
+            Things I Can't Do, <span id="bold">Yet</span>
+        </h2>
+        <p>
+            Pixel Art<br/>
+            Linear Algebra<br/>
+            Baking<br/>
+        </p>
+        <h3>
+            Interesting Things About Me:
+        </h3>
+        <p>
+            I am hardworking<br/>
+            Math is my favorite school subject<br/>
+            I love learning and trying new things<br/>
+            I am a quick learner, who usually follows social conventions and standards.
+            <input type="button" id="button" value="Button" onClick="startMarquee();hide();">
+            <marquee id="myMarquee" Direction="right" behavior="slide" scrollamount="15"></marquee>
+        </p>
+            
+    </body>
+</html>
